@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="227.0" style="-fx-background-color: #2292a4;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="83.0" prefHeight="18.0" prefWidth="216.0" text="TX TKM" textFill="#f5efed">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="58.0" prefHeight="18.0" prefWidth="299.0" text="Login" textFill="#0f0a0a">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="114.0" prefHeight="15.0" prefWidth="84.0" text="Username" textFill="#0f0a0a">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="157.0" prefHeight="15.0" prefWidth="84.0" text="Password" textFill="#0f0a0a">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" layoutX="102.0" layoutY="109.0" prefHeight="26.0" prefWidth="167.0" promptText="Username" stylesheets="@login.css" />
+            <PasswordField fx:id="passwordTextField" layoutX="102.0" layoutY="151.0" prefHeight="26.0" prefWidth="168.0" promptText="Password" stylesheets="@login.css" />
+            <Button fx:id="loginButton" layoutX="50.0" layoutY="225.0" mnemonicParsing="false" onAction="#onClickLoginButton" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: #2292a4;" text="Login" />
+            <Button fx:id="signUpButton" layoutX="50.0" layoutY="272.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: #2292a4;" text="Sign Up" />
+            <Button fx:id="closeButton" layoutX="262.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClickCloseButton" prefHeight="27.0" prefWidth="22.0" stylesheets="@login.css" text="X">
+               <font>
+                  <Font name="Bodoni MT Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="192.0" prefHeight="15.0" prefWidth="267.0" style="-fx-background-color: transparent;" textFill="#0f0a0a">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

@@ -10,6 +10,8 @@ module com.txtkm.txtkm {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
+    requires javafx.graphics;
+
     opens com.txtkm.txtkm to javafx.fxml;
     exports com.txtkm.txtkm;
 }

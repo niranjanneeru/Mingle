@@ -112,7 +112,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.txtkm.txtkm/com.txtkm.txtkm.HelloApplication</mainClass>
+                            <mainClass>com.txtkm.txtkm/com.txtkm.txtkm.Login</mainClass>
                         </configuration>
                     </execution>
                 </executions>
