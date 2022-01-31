@@ -1,0 +1,20 @@
+package com.txtkm.txtkm.utility;
+
+import java.util.regex.Pattern;
+
+public class Utility {
+
+    private static String regexPattern = "^(.+)@(\\S+)$";
+
+    protected static boolean patternMatches(String emailAddress, String regexPattern) {
+        return Pattern.compile(regexPattern)
+                .matcher(emailAddress)
+                .matches();
+    }
+
+    public static boolean emailPatternMatches(String emailAddress) {
+        return patternMatches(emailAddress, regexPattern);
+    }
+
+
+}
