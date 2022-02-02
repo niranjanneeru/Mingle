@@ -1,8 +1,12 @@
 package com.txtkm.txtkm.utility;
 
+import com.txtkm.txtkm.database.Profile;
+
 import java.util.regex.Pattern;
 
 public class Utility {
+
+    public static Profile profile;
 
     private static String regexPattern = "^(.+)@(\\S+)$";
 

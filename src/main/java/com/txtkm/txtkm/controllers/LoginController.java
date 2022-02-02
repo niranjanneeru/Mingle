@@ -3,6 +3,7 @@ package com.txtkm.txtkm.controllers;
 import com.txtkm.txtkm.Login;
 import com.txtkm.txtkm.database.DatabaseConnection;
 import com.txtkm.txtkm.database.LoginNetwork;
+import com.txtkm.txtkm.exceptions.UserNotFoundException;
 import com.txtkm.txtkm.utility.Utility;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,9 +58,8 @@ public class LoginController {
 
     private void login(String username, String password) {
         try {
-            Connection connection = DatabaseConnection.getConnection();
             LoginNetwork loginNetwork = new LoginNetwork(username, password);
-            switch (loginNetwork.checkValidLogin(connection)) {
+            switch (loginNetwork.checkValidLogin()) {
                 case -1:
                     setErrorMessage(loginMessageLabel, "Try Signing In");
                     break;
@@ -70,9 +70,9 @@ public class LoginController {
                     // login successful to next page
                     FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("profile.fxml"));
                     Stage window = (Stage) loginMessageLabel.getScene().getWindow();
-                    window.setScene(new Scene(fxmlLoader.load(), 750, 500));
+                    window.setScene(new Scene(fxmlLoader.load(), 1000, 600));
             }
-        } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException | IOException ex) {
+        } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException | IOException | UserNotFoundException ex) {
             ex.printStackTrace();
         }
     }

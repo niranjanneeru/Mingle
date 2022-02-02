@@ -12,12 +12,13 @@
                 <Image url="@assets/bg.jpeg" />
             </image>
         </ImageView>
-        <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="200.0" layoutX="54.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="171.0" layoutX="101.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@assets/logo.jpeg" />
             </image>
         </ImageView>
-        <Label layoutX="28.0" layoutY="236.0" prefHeight="18.0" prefWidth="83.0" text="Username" textFill="#4d2373">
+        <Label layoutX="28.0" layoutY="236.0" prefHeight="18.0" prefWidth="83.0" text="Username" textFill="#63249e">
             <font>
                 <Font name="Century Gothic" size="14.0" />
             </font>
@@ -29,9 +30,9 @@
         </Label>
         <TextField fx:id="usernameTextField" layoutX="111.0" layoutY="233.0" prefHeight="18.0" prefWidth="150.0" promptText="USERNAME" />
         <PasswordField fx:id="passwordTextField" layoutX="112.0" layoutY="270.0" promptText="PASSWORD" />
-        <Hyperlink fx:id="NEW" layoutX="161.0" layoutY="352.0" text="Sign Up" textFill="#4b0f8c" underline="true" />
-        <Hyperlink fx:id="CHANGE" layoutX="137.0" layoutY="386.0" prefHeight="24.0" prefWidth="112.0" text="Forgot password?" textFill="#7414b4" underline="true" />
-        <Button fx:id="loginButton" blendMode="MULTIPLY" layoutX="159.0" layoutY="305.0" mnemonicParsing="false" onAction="#onClickLoginButton" text="LOGIN" textFill="#6d06a9" textOverrun="CENTER_ELLIPSIS">
+        <Hyperlink fx:id="NEW" layoutX="161.0" layoutY="372.0" text="Sign Up" textFill="#4b0f8c" underline="true" />
+        <Hyperlink fx:id="CHANGE" layoutX="138.0" layoutY="396.0" prefHeight="24.0" prefWidth="112.0" text="Forgot password?" textFill="#7414b4" underline="true" />
+        <Button fx:id="loginButton" blendMode="MULTIPLY" layoutX="159.0" layoutY="321.0" mnemonicParsing="false" onAction="#onClickLoginButton" opacity="0.62" text="LOGIN" textFill="#6d06a9" textOverrun="CENTER_ELLIPSIS">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
@@ -41,6 +42,12 @@
                 <Font name="Centaur" size="16.0" />
             </font>
         </Label>
+        <Button fx:id="closeButton" cacheShape="false" cancelButton="true" centerShape="false" layoutX="767.0" layoutY="7.0" mnemonicParsing="false" onAction="#onClickCloseButton" opacity="0.34" prefHeight="18.0" prefWidth="27.0" text="X">
+            <font>
+                <Font name="System Bold" size="11.0" />
+            </font>
+        </Button>
+
         <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="28.0" layoutY="195.0" prefHeight="18.0" prefWidth="233.0" textFill="#4d2373">
             <font>
                 <Font name="Century Gothic" size="14.0" />

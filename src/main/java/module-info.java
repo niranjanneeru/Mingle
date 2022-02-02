@@ -22,5 +22,6 @@ module com.txtkm.txtkm {
     opens com.txtkm.txtkm.utility to javafx.fxml;
     exports com.txtkm.txtkm.controllers;
     opens com.txtkm.txtkm.controllers to javafx.fxml;
+    exports com.txtkm.txtkm.exceptions;
     exports com.txtkm.txtkm;
 }

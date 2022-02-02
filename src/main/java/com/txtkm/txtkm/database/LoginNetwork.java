@@ -1,5 +1,8 @@
 package com.txtkm.txtkm.database;
 
+import com.txtkm.txtkm.exceptions.UserNotFoundException;
+import com.txtkm.txtkm.utility.Utility;
+
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -16,7 +19,8 @@ public class LoginNetwork {
         this.hashPassword();
     }
 
-    public int checkValidLogin(Connection connection) throws SQLException {
+    public int checkValidLogin() throws SQLException, ClassNotFoundException, UserNotFoundException {
+        Connection connection = DatabaseConnection.getConnection();
         String query = "select * from usertable where email = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, username);
@@ -26,6 +30,8 @@ public class LoginNetwork {
         }
         String password = rs.getString("password");
         if (password.equals(this.password)) {
+            ProfileBuilder builder = new ProfileBuilder(new Profile());
+            Utility.profile = builder.setId(rs.getInt("id")).populateData().build();
             return 1;
         } else {
             return 0;
