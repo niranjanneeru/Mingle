@@ -1,16 +1,20 @@
 package com.txtkm.txtkm.controllers;
 
+import com.txtkm.txtkm.Login;
 import com.txtkm.txtkm.database.DatabaseConnection;
 import com.txtkm.txtkm.database.LoginNetwork;
 import com.txtkm.txtkm.utility.Utility;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -64,9 +68,11 @@ public class LoginController {
                     break;
                 case 1:
                     // login successful to next page
-                    setErrorMessage(loginMessageLabel, "Successful");
+                    FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("profile.fxml"));
+                    Stage window = (Stage) loginMessageLabel.getScene().getWindow();
+                    window.setScene(new Scene(fxmlLoader.load(), 750, 500));
             }
-        } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException ex) {
+        } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException | IOException ex) {
             ex.printStackTrace();
         }
     }

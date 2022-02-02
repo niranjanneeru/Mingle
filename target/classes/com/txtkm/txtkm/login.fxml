@@ -1,61 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.LoginController">
-   <left>
-      <AnchorPane prefHeight="400.0" prefWidth="227.0" style="-fx-background-color: #2292a4;" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="83.0" prefHeight="18.0" prefWidth="216.0" text="TX TKM" textFill="#f5efed">
-               <font>
-                  <Font name="Verdana Bold" size="24.0" />
-               </font>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Label>
-         </children>
-      </AnchorPane>
-   </left>
-   <right>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" layoutY="58.0" prefHeight="18.0" prefWidth="299.0" text="Login" textFill="#0f0a0a">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="15.0" />
-               </font>
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Label>
-            <Label alignment="CENTER" layoutX="-1.0" layoutY="114.0" prefHeight="15.0" prefWidth="84.0" text="Email" textFill="#0f0a0a">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="9.0" layoutY="157.0" prefHeight="15.0" prefWidth="84.0" text="Password" textFill="#0f0a0a">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Label>
-            <TextField fx:id="usernameTextField" layoutX="102.0" layoutY="109.0" prefHeight="26.0" prefWidth="167.0" promptText="Email" stylesheets="@login.css" />
-            <PasswordField fx:id="passwordTextField" layoutX="102.0" layoutY="151.0" prefHeight="26.0" prefWidth="168.0" promptText="Password" stylesheets="@login.css" />
-            <Button fx:id="loginButton" layoutX="50.0" layoutY="225.0" mnemonicParsing="false" onAction="#onClickLoginButton" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: #2292a4;" text="Login" />
-            <Button fx:id="signUpButton" layoutX="50.0" layoutY="272.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: #2292a4;" text="Sign Up" />
-            <Button fx:id="closeButton" layoutX="262.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClickCloseButton" prefHeight="27.0" prefWidth="22.0" stylesheets="@login.css" text="X">
-               <font>
-                  <Font name="Bodoni MT Bold" size="13.0" />
-               </font>
-            </Button>
-            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="192.0" prefHeight="15.0" prefWidth="267.0" style="-fx-background-color: transparent;" textFill="#0f0a0a">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </right>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.LoginController">
+    <children>
+        <ImageView blendMode="DARKEN" fitHeight="505.0" fitWidth="808.0" layoutX="-3.0" layoutY="-8.0" pickOnBounds="true">
+            <image>
+                <Image url="@assets/bg.jpeg" />
+            </image>
+        </ImageView>
+        <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="200.0" layoutX="54.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@assets/logo.jpeg" />
+            </image>
+        </ImageView>
+        <Label layoutX="28.0" layoutY="236.0" prefHeight="18.0" prefWidth="83.0" text="Username" textFill="#4d2373">
+            <font>
+                <Font name="Century Gothic" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="28.0" layoutY="272.0" prefHeight="19.0" prefWidth="83.0" text="Password" textFill="#600f8c">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="usernameTextField" layoutX="111.0" layoutY="233.0" prefHeight="18.0" prefWidth="150.0" promptText="USERNAME" />
+        <PasswordField fx:id="passwordTextField" layoutX="112.0" layoutY="270.0" promptText="PASSWORD" />
+        <Hyperlink fx:id="NEW" layoutX="161.0" layoutY="352.0" text="Sign Up" textFill="#4b0f8c" underline="true" />
+        <Hyperlink fx:id="CHANGE" layoutX="137.0" layoutY="386.0" prefHeight="24.0" prefWidth="112.0" text="Forgot password?" textFill="#7414b4" underline="true" />
+        <Button fx:id="loginButton" blendMode="MULTIPLY" layoutX="159.0" layoutY="305.0" mnemonicParsing="false" onAction="#onClickLoginButton" text="LOGIN" textFill="#6d06a9" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="701.0" layoutY="467.0" prefHeight="22.0" prefWidth="95.0" text="CSE_TKMCE" textFill="WHITE">
+            <font>
+                <Font name="Centaur" size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="28.0" layoutY="195.0" prefHeight="18.0" prefWidth="233.0" textFill="#4d2373">
+            <font>
+                <Font name="Century Gothic" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

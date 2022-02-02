@@ -8,9 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.txtkm.txtkm.controllers.ProfileController"
             prefHeight="750.0" prefWidth="500.0">
-
-
-<!--    fx:controller="com.txtkm.txtkm.Profile"-->
 
 </AnchorPane>
