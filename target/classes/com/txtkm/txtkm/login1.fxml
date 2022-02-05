@@ -28,11 +28,11 @@
                 <Font name="Cambria" size="14.0" />
             </font>
         </Label>
-        <TextField fx:id="usernameTextField" layoutX="625.0" layoutY="223.0" prefHeight="18.0" prefWidth="150.0" stylesheets="@stylesheets/login.css" />
-        <PasswordField fx:id="passwordTextField" layoutX="626.0" layoutY="260.0" stylesheets="@stylesheets/login.css" />
+        <TextField fx:id="usernameTextField" layoutX="625.0" layoutY="223.0" prefHeight="18.0" prefWidth="150.0" stylesheets="@styles1.css" />
+        <PasswordField fx:id="passwordTextField" layoutX="626.0" layoutY="260.0" stylesheets="@styles1.css" />
         <Hyperlink fx:id="NEW" layoutX="683.0" layoutY="348.0" text="Sign Up" textFill="WHITE" underline="true" />
         <Hyperlink fx:id="CHANGE" layoutX="659.0" layoutY="381.0" prefHeight="24.0" prefWidth="112.0" text="Forgot password?" textFill="WHITE" underline="true" />
-        <Button fx:id="loginButton" blendMode="SRC_ATOP" layoutX="681.0" layoutY="305.0" mnemonicParsing="false" onAction="#onClickLoginButton" opacity="0.68" style="-fx-background-color: #1B0205; -fx-background-radius: 30;" stylesheets="@stylesheets/login.css" text="LOGIN" textFill="#f5fdff" textOverrun="CENTER_ELLIPSIS">
+        <Button fx:id="loginButton" blendMode="SRC_ATOP" layoutX="681.0" layoutY="305.0" mnemonicParsing="false" onAction="#onClickLoginButton" opacity="0.68" style="-fx-background-color: #1B0205; -fx-background-radius: 30;" stylesheets="@styles1.css" text="LOGIN" textFill="#f5fdff" textOverrun="CENTER_ELLIPSIS">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>

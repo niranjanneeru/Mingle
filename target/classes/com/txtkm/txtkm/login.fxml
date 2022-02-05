@@ -5,52 +5,63 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.LoginController">
+<AnchorPane fx:id="parentLoginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="494.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.LoginController">
     <children>
-        <ImageView blendMode="DARKEN" fitHeight="505.0" fitWidth="808.0" layoutX="-3.0" layoutY="-8.0" pickOnBounds="true">
+        <ImageView blendMode="DARKEN" fitHeight="505.0" fitWidth="808.0" layoutX="-3.0" layoutY="-8.0"
+                   pickOnBounds="true">
             <image>
-                <Image url="@assets/bg.jpeg" />
+                <Image url="@assets/bg.jpeg"/>
             </image>
         </ImageView>
-        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-        <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="171.0" layoutX="101.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+        <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="171.0" layoutX="101.0" layoutY="40.0"
+                   pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@assets/logo.jpeg" />
+                <Image url="@assets/logo.jpeg"/>
             </image>
         </ImageView>
         <Label layoutX="28.0" layoutY="236.0" prefHeight="18.0" prefWidth="83.0" text="Username" textFill="#63249e">
             <font>
-                <Font name="Century Gothic" size="14.0" />
+                <Font name="Century Gothic" size="14.0"/>
             </font>
         </Label>
         <Label layoutX="28.0" layoutY="272.0" prefHeight="19.0" prefWidth="83.0" text="Password" textFill="#600f8c">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </Label>
-        <TextField fx:id="usernameTextField" layoutX="111.0" layoutY="233.0" prefHeight="18.0" prefWidth="150.0" promptText="USERNAME" />
-        <PasswordField fx:id="passwordTextField" layoutX="112.0" layoutY="270.0" promptText="PASSWORD" />
-        <Hyperlink fx:id="NEW" layoutX="161.0" layoutY="372.0" text="Sign Up" textFill="#4b0f8c" underline="true" />
-        <Hyperlink fx:id="CHANGE" layoutX="138.0" layoutY="396.0" prefHeight="24.0" prefWidth="112.0" text="Forgot password?" textFill="#7414b4" underline="true" />
-        <Button fx:id="loginButton" blendMode="MULTIPLY" layoutX="159.0" layoutY="321.0" mnemonicParsing="false" onAction="#onClickLoginButton" opacity="0.62" text="LOGIN" textFill="#6d06a9" textOverrun="CENTER_ELLIPSIS">
+        <TextField fx:id="usernameTextField" layoutX="111.0" layoutY="233.0" prefHeight="18.0" prefWidth="150.0"
+                   promptText="USERNAME"/>
+        <PasswordField fx:id="passwordTextField" layoutX="112.0" layoutY="270.0" promptText="PASSWORD"/>
+        <Hyperlink fx:id="NEW" layoutX="161.0" layoutY="372.0" text="Sign Up" textFill="#4b0f8c" underline="true"/>
+        <Hyperlink fx:id="CHANGE" layoutX="138.0" layoutY="396.0" prefHeight="24.0" prefWidth="112.0"
+                   text="Forgot password?" textFill="#7414b4" underline="true"/>
+        <Button fx:id="loginButton" blendMode="MULTIPLY" layoutX="159.0" layoutY="321.0" mnemonicParsing="false"
+                onAction="#onClickLoginButton" opacity="0.62" text="LOGIN" textFill="#6d06a9"
+                textOverrun="CENTER_ELLIPSIS">
             <font>
-                <Font name="System Bold" size="12.0" />
+                <Font name="System Bold" size="12.0"/>
             </font>
         </Button>
         <Label layoutX="701.0" layoutY="467.0" prefHeight="22.0" prefWidth="95.0" text="CSE_TKMCE" textFill="WHITE">
             <font>
-                <Font name="Centaur" size="16.0" />
+                <Font name="Centaur" size="16.0"/>
             </font>
         </Label>
-        <Button fx:id="closeButton" cacheShape="false" cancelButton="true" centerShape="false" layoutX="767.0" layoutY="7.0" mnemonicParsing="false" onAction="#onClickCloseButton" opacity="0.34" prefHeight="18.0" prefWidth="27.0" text="X">
+        <Button fx:id="closeButton" cacheShape="false" cancelButton="true" centerShape="false" layoutX="767.0"
+                layoutY="7.0" mnemonicParsing="false" onAction="#onClickCloseButton" opacity="0.34" prefHeight="18.0"
+                prefWidth="27.0" style="-fx-background-color: transparent;">
             <font>
-                <Font name="System Bold" size="11.0" />
+                <Font name="System Bold" size="11.0"/>
             </font>
         </Button>
 
-        <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="28.0" layoutY="195.0" prefHeight="18.0" prefWidth="233.0" textFill="#4d2373">
+        <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="28.0" layoutY="195.0" prefHeight="18.0"
+               prefWidth="233.0" textFill="#4d2373">
             <font>
-                <Font name="Century Gothic" size="14.0" />
+                <Font name="Century Gothic" size="14.0"/>
             </font>
         </Label>
     </children>

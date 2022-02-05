@@ -85,8 +85,10 @@ public class ProfileBuilder {
         statement.setInt(1, profile.id);
         ResultSet rs = statement.executeQuery();
         HashMap<Integer, String> links = new HashMap<>();
+        int i = 0;
         while (rs.next()) {
-            links.put(rs.getInt("id"), rs.getString("url"));
+            links.put(i, rs.getString("url"));
+            i++;
         }
         profile.urls = links;
 

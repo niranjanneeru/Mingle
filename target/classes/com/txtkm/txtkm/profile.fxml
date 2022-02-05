@@ -4,8 +4,9 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="1000.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.ProfileController">
-   <children>
-      <Button layoutX="261.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClickTest" text="Button" />
-   </children>
+<AnchorPane prefHeight="1000.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.ProfileController">
+    <children>
+        <Button layoutX="261.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClickTest" text="Button"/>
+    </children>
 </AnchorPane>

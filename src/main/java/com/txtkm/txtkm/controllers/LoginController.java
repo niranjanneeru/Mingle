@@ -12,8 +12,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.w3c.dom.events.MouseEvent;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -32,6 +34,12 @@ public class LoginController {
 
     @FXML
     private TextField passwordTextField;
+
+//    @FXML
+//    private AnchorPane parentLoginPane;
+
+    private double xOffset;
+    private double yOffset;
 
     private final Color red = new Color(1, 0, 0, 1);
 
@@ -61,8 +69,8 @@ public class LoginController {
             LoginNetwork loginNetwork = new LoginNetwork(username, password);
             switch (loginNetwork.checkValidLogin()) {
                 case -1:
-                    setErrorMessage(loginMessageLabel, "Try Signing In");
-                    break;
+//                    setErrorMessage(loginMessageLabel, "Try Signing In");
+//                    break;
                 case 0:
                     setErrorMessage(loginMessageLabel, "Authentication Failed");
                     break;
@@ -71,6 +79,8 @@ public class LoginController {
                     FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("profile.fxml"));
                     Stage window = (Stage) loginMessageLabel.getScene().getWindow();
                     window.setScene(new Scene(fxmlLoader.load(), 1000, 600));
+                    ProfileController controller = fxmlLoader.getController();
+                    controller.setProfile(Utility.profile);
             }
         } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException | IOException | UserNotFoundException ex) {
             ex.printStackTrace();
@@ -87,4 +97,18 @@ public class LoginController {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
+
+//    @FXML
+//    protected void parentMousePressed(MouseEvent event) {
+//        Stage primaryStage = (Stage) parentLoginPane.getScene().getWindow();
+//        xOffset = primaryStage.getX() - event.getScreenX();
+//        yOffset = primaryStage.getY() - event.getScreenY();
+//    }
+//
+//    @FXML
+//    protected void parentMouseDragged(MouseEvent event) {
+//        Stage primaryStage = (Stage) parentLoginPane.getScene().getWindow();
+//        primaryStage.setX(event.getScreenX() + xOffset);
+//        primaryStage.setY(event.getScreenY() + yOffset);
+//    }
 }

@@ -90,6 +90,12 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.netflix.glisten</groupId>
+            <artifactId>glisten</artifactId>
+            <version>0.3</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
