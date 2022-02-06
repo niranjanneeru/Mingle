@@ -66,5 +66,9 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.gluonhq:charm-down-android:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.gluonhq:charm-down-common:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.zxing:core:3.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.javafxports:jfxdvk:8.60.6" level="project" />
   </component>
 </module>

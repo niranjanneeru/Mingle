@@ -12,7 +12,9 @@ module com.txtkm.txtkm {
 
     requires javafx.graphics;
     requires java.sql;
+    requires java.prefs;
     requires org.postgresql.jdbc;
+    requires charm.glisten;
 
     opens com.txtkm.txtkm to javafx.fxml;
 

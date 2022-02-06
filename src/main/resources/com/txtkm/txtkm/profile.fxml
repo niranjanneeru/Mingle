@@ -145,13 +145,13 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="40.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
                             <children>
-                                <Label prefHeight="26.0" prefWidth="86.0" text="Username" textFill="WHITE">
+                                <Label prefHeight="26.0" prefWidth="86.0" text="Description" textFill="WHITE">
                                     <font>
                                         <Font size="17.0" />
                                     </font>
                                 </Label>
                                 <Pane prefHeight="26.0" prefWidth="42.0" />
-                                <TextField fx:id="usernameTextField" prefHeight="26.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                                <TextField fx:id="descTextField" prefHeight="26.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
                             </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="67.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">

@@ -22,6 +22,19 @@ public class ProfileBuilder {
         return this;
     }
 
+    public ProfileBuilder setIdToken(String token) throws SQLException, ClassNotFoundException, UserNotFoundException {
+        String sql = "SELECT * FROM usertable where token = ?";
+        PreparedStatement statement = DatabaseConnection.getConnection().prepareStatement(sql);
+        statement.setString(1, token);
+        ResultSet rs = statement.executeQuery();
+        if (rs.next()) {
+            profile.id = rs.getInt("id");
+        } else {
+            throw new UserNotFoundException();
+        }
+        return this;
+    }
+
     public ProfileBuilder setName(String name) {
         profile.name = name;
         return this;
