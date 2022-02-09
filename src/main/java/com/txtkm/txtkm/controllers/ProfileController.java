@@ -1,6 +1,8 @@
 package com.txtkm.txtkm.controllers;
 
 import com.gluonhq.charm.glisten.control.TextField;
+import com.txtkm.txtkm.database.Post;
+import com.txtkm.txtkm.database.PostBuilder;
 import com.txtkm.txtkm.database.Profile;
 import com.txtkm.txtkm.utility.Utility;
 import javafx.event.ActionEvent;
@@ -9,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.sql.SQLException;
 import java.util.Map;
 
 
@@ -42,6 +45,13 @@ public class ProfileController {
     protected ImageView profileImageView;
 
     public void setProfile(Profile profile) {
+        PostBuilder builder = new PostBuilder(new Post());
+        try {
+            System.out.println(builder.getAllPost());
+            System.out.println(builder.getPostById(Utility.profile));
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         nameLabel.setText(profile.getName());
         nameTextField.setText(profile.getName());
 //        nameTextField.setDisable(true);

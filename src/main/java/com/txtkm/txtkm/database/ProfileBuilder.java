@@ -90,7 +90,7 @@ public class ProfileBuilder {
         return this;
     }
 
-    private ProfileBuilder populateImages() throws SQLException, ClassNotFoundException {
+    public ProfileBuilder populateImages() throws SQLException, ClassNotFoundException {
         assert (profile.id != null);
 
         String sql = "SELECT * FROM photos where id = ?";
@@ -108,7 +108,7 @@ public class ProfileBuilder {
         return this;
     }
 
-    private ProfileBuilder populateTags() throws SQLException, ClassNotFoundException {
+    public ProfileBuilder populateTags() throws SQLException, ClassNotFoundException {
         assert (profile.id != null);
 
         String sql = "SELECT * FROM tags WHERE tag IN (SELECT tag_id FROM profile_tags WHERE id = ?)";

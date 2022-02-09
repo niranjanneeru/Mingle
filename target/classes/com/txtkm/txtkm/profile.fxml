@@ -1,12 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="1000.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.ProfileController">
-    <children>
-        <Button layoutX="261.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClickTest" text="Button"/>
-    </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="848.0" stylesheets="@stylesheets/profile.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.ProfileController">
+    <left>
+        <VBox prefHeight="546.0" prefWidth="266.0" spacing="30.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="182.0" prefWidth="266.0" spacing="10.0">
+                    <VBox.margin>
+                        <Insets top="50.0" />
+                    </VBox.margin>
+                    <children>
+                        <ImageView fx:id="profileImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assets/account.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="nameLabel" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-border-radius: 20; -fx-background-color: #242551; -fx-background-radius: 30;" stylesheets="@stylesheets/profile.css" text="Edit Profile" textFill="WHITE" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="259.0" prefWidth="266.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="33.0" prefWidth="266.0" styleClass="selected-border" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@assets/account.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Profile" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="15.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets top="15.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@assets/bell.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Notifications" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="15.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets top="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@assets/key.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Passwords" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="15.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets top="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                            <children>
+                                <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@assets/gear.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Settings" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="15.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets top="23.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="116.0" prefHeight="29.0" prefWidth="266.0" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" styleClass="secondary-color" stylesheets="@stylesheets/profile.css" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="36.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css" text="Profile Settings" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                    <children>
+                        <Label prefHeight="18.0" prefWidth="590.0" text="Profile Details" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="50.0" text="Name" textFill="WHITE">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="28.0" prefWidth="79.0" />
+                                <TextField fx:id="nameTextField" prefHeight="28.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="40.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="86.0" text="Description" textFill="WHITE">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="26.0" prefWidth="42.0" />
+                                <TextField fx:id="descTextField" prefHeight="26.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="67.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="50.0" text="Year" textFill="WHITE">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="28.0" prefWidth="79.0" />
+                                <TextField fx:id="yearTextField" prefHeight="28.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="93.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="74.0" text="Branch" textFill="WHITE">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="26.0" prefWidth="55.0" />
+                                <TextField fx:id="branchTextField" prefHeight="28.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="120.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="50.0" text="Phone" textFill="WHITE">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="28.0" prefWidth="79.0" />
+                                <TextField fx:id="phoneTextField" prefHeight="28.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="146.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="50.0" text="e-Mail" textFill="WHITE">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="28.0" prefWidth="79.0" />
+                                <TextField fx:id="mailTextField" prefHeight="28.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="172.0" prefHeight="0.0" prefWidth="482.0" stylesheets="@stylesheets/profile.css">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="50.0" text="Tags" textFill="WHITE">
+                                    <font>
+                                        <Font size="17.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="28.0" prefWidth="79.0" />
+                                <TextField fx:id="tagsTextField" prefHeight="28.0" prefWidth="282.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0 0 0 0; -fx-border-color: #242551;" stylesheets="@stylesheets/profile.css" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="155.0" style="-fx-border-radius: 20; -fx-background-color: #242551; -fx-background-radius: 30;" stylesheets="@stylesheets/profile.css" text="Save Changes" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+            </padding>
+        </VBox>
+    </center>
+</BorderPane>
