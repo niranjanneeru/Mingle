@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.javafxports:jfxdvk:8.60.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javafxports/jfxdvk/8.60.6/jfxdvk-8.60.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javafxports/jfxdvk/8.60.6/jfxdvk-8.60.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javafxports/jfxdvk/8.60.6/jfxdvk-8.60.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

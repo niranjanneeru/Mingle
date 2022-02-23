@@ -29,6 +29,9 @@ public class LoginNetwork {
             return -1;
         }
         String password = rs.getString("password");
+        String token = rs.getString("token");
+        LoginPersistence.getPersistence().setPrefs(token);
+        System.out.println(LoginPersistence.getPersistence().getPrefs());
         if (password.equals(this.password)) {
             ProfileBuilder builder = new ProfileBuilder(new Profile());
             Utility.profile = builder.setId(rs.getInt("id")).populateData().build();
