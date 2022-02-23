@@ -47,8 +47,15 @@ public class ProfileController {
     public void setProfile(Profile profile) {
         PostBuilder builder = new PostBuilder(new Post());
         try {
-            System.out.println(builder.getAllPost());
-            System.out.println(builder.getPostById(Utility.profile));
+//            System.out.println(builder.getAllPost());
+//            System.out.println(builder.getPostById(Utility.profile));
+//            System.out.println(builder
+//                    .setAuthor(Utility.profile)
+//                    .setTitle("Test")
+//                    .setDesc("Avra")
+//                    .setTags(Utility.profile.getTags())
+//                    .createPost());
+            System.out.println(builder.generateFeed(Utility.profile));
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

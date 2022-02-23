@@ -36,4 +36,24 @@ public class Post {
                 ", tags=" + tags +
                 '}';
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public Profile getAuthor() {
+        return author;
+    }
+
+    public HashMap<Integer, String> getTags() {
+        return tags;
+    }
 }
