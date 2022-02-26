@@ -1,5 +1,6 @@
 package com.txtkm.txtkm.database;
 
+import com.txtkm.txtkm.exceptions.UserNotFoundException;
 import javafx.scene.control.TableRow;
 
 import java.lang.reflect.Array;
@@ -92,6 +93,42 @@ public class PostBuilder {
         return processResultSetPost(rs);
     }
 
+    public void generateRequests() throws SQLException, ClassNotFoundException, UserNotFoundException {
+        assert post != null;
+        String sql = "SELECT * FROM request JOIN profile ON request.request=profile.id JOIN usertable ON " +
+                "request.request=usertable.id WHERE request.post = ? AND status = FALSE";
+        PreparedStatement preparedStatement = DatabaseConnection.getConnection().prepareStatement(sql);
+        preparedStatement.setInt(1,post.id);
+        ResultSet rs = preparedStatement.executeQuery();
+        post.requests = new ArrayList<>();
+        while (rs.next()){
+            Post.Request req = new Post.Request();
+            ProfileBuilder builder = new ProfileBuilder(new Profile());
+            builder.setId(rs.getInt("request"));
+            builder.populateProfile();
+            builder.populateUser();
+            req.requester = builder.build();
+            req.desc = rs.getString("desc");
+            req.id = rs.getInt("id");
+            post.requests.add(req);
+        }
+
+    }
+
+    public void setAccepted(int id) throws SQLException, ClassNotFoundException {
+        String sql = "UPDATE request set status = TRUE where id =?";
+        PreparedStatement statement = DatabaseConnection.getConnection().prepareStatement(sql);
+        statement.setInt(1,id);
+        statement.executeUpdate();
+    }
+
+    public void setDeclined(int id) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE from request where id =?";
+        PreparedStatement statement = DatabaseConnection.getConnection().prepareStatement(sql);
+        statement.setInt(1,id);
+        statement.executeUpdate();
+    }
+
     public PostBuilder setId(int id) {
         this.post.id = id;
         return this;
@@ -115,5 +152,9 @@ public class PostBuilder {
     public PostBuilder setTags(HashMap<Integer, String> tags) {
         this.post.tags = tags;
         return this;
+    }
+
+    public Post build() {
+        return this.post;
     }
 }

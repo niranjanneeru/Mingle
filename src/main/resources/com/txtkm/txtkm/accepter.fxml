@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="799.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.AcceptorController">
+    <children>
+        <SplitPane dividerPositions="0.6418410041841004" prefHeight="494.0" prefWidth="799.0" styleClass="primary-color">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="secondary-color">
+                    <children>
+                        <Label layoutX="57.0" layoutY="39.0" text="REQUESTS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Label>
+                        <Pane layoutX="57.0" layoutY="75.0" prefHeight="375.0" prefWidth="422.0">
+                            <children>
+                                <ListView fx:id="requestList" prefHeight="375.0" prefWidth="422.0" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="primary-color">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="241.0" layoutX="69.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assets/account.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="raccept" layoutX="7.0" layoutY="434.0" mnemonicParsing="false" onAction="#acceptClick" prefHeight="25.0" prefWidth="123.0" style="-fx-border-radius: 30; -fx-background-color: #242551; -fx-background-radius: 30;" text="Accept" textFill="WHITE" />
+                        <Button fx:id="rdecline" layoutX="144.0" layoutY="434.0" mnemonicParsing="false" onAction="#declineClick" prefHeight="25.0" prefWidth="123.0" style="-fx-border-radius: 30; -fx-background-color: #242551; -fx-background-radius: 30;" text="Decline" textFill="#db0909" />
+                        <HBox layoutX="30.0" layoutY="196.0" prefHeight="36.0" prefWidth="219.0">
+                            <children>
+                                <Label text="Name" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="36.0" prefWidth="34.0" visible="false" />
+                                <TextField fx:id="pname" editable="false" prefHeight="27.0" prefWidth="145.0" />
+                            </children>
+                        </HBox>
+                        <HBox layoutX="-1.0" layoutY="232.0" prefHeight="150.0" prefWidth="245.0">
+                            <children>
+                                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="80.0" text="Description" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Pane prefHeight="150.0" prefWidth="33.0" />
+                                <TextField fx:id="pdesc" prefHeight="29.0" prefWidth="142.0" />
+                            </children>
+                        </HBox>
+                  <Button fx:id="back" layoutX="79.0" layoutY="382.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="25.0" prefWidth="123.0" style="-fx-border-radius: 30; -fx-background-color: #242551; -fx-background-radius: 30;" text="Back" textFill="WHITE" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

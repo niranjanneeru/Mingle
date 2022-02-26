@@ -13,6 +13,7 @@ public class Post {
     protected String desc;
     protected Profile author;
     protected HashMap<Integer, String> tags;
+    protected ArrayList<Request> requests;
 
 
     public void populateTags() throws SQLException, ClassNotFoundException {
@@ -55,5 +56,15 @@ public class Post {
 
     public HashMap<Integer, String> getTags() {
         return tags;
+    }
+
+    public static class Request {
+        public int id;
+        public Profile requester;
+        public String desc;
+    }
+
+    public ArrayList<Request> getRequests() {
+        return requests;
     }
 }
