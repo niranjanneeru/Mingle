@@ -85,7 +85,13 @@ public class ProfileController {
         });
 
         feedIcon.setOnMouseClicked(mouseEvent -> {
-
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("feed.fxml"));
+            Stage window = (Stage) profileImageView.getScene().getWindow();
+            try {
+                window.setScene(new Scene(fxmlLoader.load(), 848, 546));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
         PostBuilder builder = new PostBuilder(new Post());

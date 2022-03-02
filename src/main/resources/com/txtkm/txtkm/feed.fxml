@@ -1,17 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXListView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.FeedController">
-   <children>
-      <AnchorPane layoutX="-1.0" prefHeight="600.0" prefWidth="300.0" />
-      <AnchorPane layoutX="300.0" layoutY="1.0" prefHeight="600.0" prefWidth="500.0">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/17" fx:controller="com.txtkm.txtkm.controllers.FeedController" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="546.0" prefWidth="266.0" spacing="30.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css" BorderPane.alignment="CENTER">
          <children>
-            <JFXListView fx:id="feedListView" prefHeight="600.0" prefWidth="500.0" />
+            <VBox alignment="CENTER" prefHeight="182.0" prefWidth="266.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="97.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/account.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Niranjan B" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="259.0" prefWidth="266.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="33.0" prefWidth="266.0" stylesheets="@stylesheets/profile.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="20.0" prefWidth="127.0" text="Profile " textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/add-file.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="20.0" prefWidth="127.0" stylesheets="@stylesheets/profile.css" text="Posts" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="54.0" prefWidth="247.0" styleClass="selected">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/rss.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="22.0" prefWidth="122.0" styleClass="selected-border" stylesheets="@stylesheets/profile.css" text="Feeds" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/setting.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="20.0" prefWidth="127.0" text="Settings" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="23.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="116.0" prefHeight="29.0" prefWidth="266.0" />
+               </children>
+            </VBox>
          </children>
-      </AnchorPane>
-      <AnchorPane layoutX="800.0" prefHeight="600.0" prefWidth="200.0" />
-   </children>
-</AnchorPane>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="50.0" styleClass="secondary-color" stylesheets="@stylesheets/profile.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="36.0" prefWidth="482.0" text="Feeds_____________________________" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" cacheShape="false" centerShape="false" prefHeight="130.0" prefWidth="482.0" scaleShape="false" stylesheets="@stylesheets/profile.css">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="86.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css">
+                     <graphic>
+                        <ImageView fitHeight="82.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/upload.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label prefHeight="26.0" prefWidth="60.0" text="Upload " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" cacheShape="false" centerShape="false" prefHeight="128.0" prefWidth="482.0" scaleShape="false">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="86.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css">
+                     <graphic>
+                        <ImageView fitHeight="104.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/add-folder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label cacheShape="false" centerShape="false" prefHeight="8.0" prefWidth="106.0" scaleShape="false" text="Creare Project" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="159.0" prefWidth="482.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="482.0" text="Public__________________________________________________" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="82.0" prefWidth="482.0">
+                     <children>
+                        <Label cacheShape="false" centerShape="false" focusTraversable="false" scaleShape="false" text="No current Activities" textFill="WHITE" underline="true" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
