@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.FeedController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.FeedController">
    <left>
       <VBox prefHeight="546.0" prefWidth="266.0" spacing="30.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css" BorderPane.alignment="CENTER">
          <children>
@@ -143,7 +143,7 @@
             </VBox>
             <VBox alignment="CENTER" cacheShape="false" centerShape="false" prefHeight="128.0" prefWidth="482.0" scaleShape="false">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="86.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css">
+                  <Button fx:id="create" mnemonicParsing="false" prefHeight="73.0" prefWidth="86.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css">
                      <graphic>
                         <ImageView fitHeight="104.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
                            <image>

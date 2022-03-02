@@ -9,6 +9,7 @@ import com.txtkm.txtkm.utility.Utility;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -34,6 +35,9 @@ public class FeedController {
 
     @FXML
     protected Label name;
+
+    @FXML
+    protected Button create;
 
     @FXML
     public void initialize() {
@@ -75,5 +79,16 @@ public class FeedController {
         if (Utility.profile.getUrls() != null) {
             imageView.setImage(new Image(Utility.profile.getUrls().get(0)));
         }
+
+        create.setOnMouseClicked(mouseEvent -> {
+//            System.out.println("Hi");
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("form.fxml"));
+            Stage window = (Stage) logOut.getScene().getWindow();
+            try {
+                window.setScene(new Scene(fxmlLoader.load(), 848, 546));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
