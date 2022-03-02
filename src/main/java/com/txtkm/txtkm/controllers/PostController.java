@@ -26,6 +26,12 @@ public class PostController {
     protected HBox logOut;
 
     @FXML
+    protected HBox profileBox;
+
+    @FXML
+    protected HBox feedIcon;
+
+    @FXML
     public void initialize() {
         PostBuilder builder = new PostBuilder(new Post());
         try {
@@ -36,6 +42,29 @@ public class PostController {
         for (Post p : posts) {
             postList.getItems().add(p.getTitle() + ":" + p.getDesc());
         }
+
+        profileBox.setOnMouseClicked(mouseEvent -> {
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("profile.fxml"));
+            Stage stage = (Stage) profileBox.getScene().getWindow();
+            try {
+                stage.setScene(new Scene(fxmlLoader.load(), 1000, 600));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            stage.show();
+            ProfileController controller = fxmlLoader.getController();
+            controller.setProfile(Utility.profile);
+        });
+
+        feedIcon.setOnMouseClicked(mouseEvent -> {
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("feed.fxml"));
+            Stage window = (Stage) logOut.getScene().getWindow();
+            try {
+                window.setScene(new Scene(fxmlLoader.load(), 848, 546));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
         logOut.setOnMouseClicked(mouseEvent -> {
             LoginPersistence.getPersistence().removePrefs();

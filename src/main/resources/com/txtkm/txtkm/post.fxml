@@ -30,11 +30,11 @@
                 </VBox>
                 <VBox prefHeight="259.0" prefWidth="266.0">
                     <children>
-                        <HBox alignment="CENTER" fillHeight="false" prefHeight="33.0" prefWidth="266.0" styleClass="selected-border" stylesheets="@stylesheets/profile.css" VBox.vgrow="NEVER">
+                        <HBox fx:id="profileBox" alignment="CENTER" fillHeight="false" prefHeight="33.0" prefWidth="266.0" styleClass="selected" stylesheets="@stylesheets/profile.css" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@assets/account.png" />
+                                        <Image url="@assets/user.png" />
                                     </image>
                                 </ImageView>
                                 <Label prefHeight="20.0" prefWidth="127.0" text="Profile" textAlignment="CENTER" textFill="WHITE">
@@ -50,11 +50,11 @@
                                 <Insets top="15.0" />
                             </padding>
                         </HBox>
-                        <HBox fx:id="postBox" alignment="CENTER" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
+                        <HBox fx:id="postBox" alignment="CENTER" prefHeight="29.0" prefWidth="266.0" styleClass="selected-border" stylesheets="@stylesheets/profile.css" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@assets/bell.png" />
+                                        <Image url="@assets/add-file.png" />
                                     </image>
                                 </ImageView>
                                 <Label prefHeight="20.0" prefWidth="127.0" text="Posts" textFill="WHITE" HBox.hgrow="NEVER">
@@ -70,11 +70,11 @@
                                 <Insets top="20.0" />
                             </padding>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
+                        <HBox fx:id="feedIcon" alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@assets/key.png" />
+                                        <Image url="@assets/rss.png" />
                                     </image>
                                 </ImageView>
                                 <Label prefHeight="20.0" prefWidth="127.0" text="Feed" textFill="WHITE">
@@ -94,7 +94,7 @@
                             <children>
                                 <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
                                     <image>
-                                        <Image url="@assets/gear.png" />
+                                        <Image url="@assets/log-out.png" />
                                     </image>
                                 </ImageView>
                                 <Label prefHeight="20.0" prefWidth="127.0" text="Logout" textFill="WHITE">
@@ -124,7 +124,7 @@
                         <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
-            <ListView fx:id="postList" prefHeight="456.0" prefWidth="482.0" style="-fx-background-color: transparent; -fx-control-inner-background: #00002C;" styleClass="secondary-color" />
+                <ListView fx:id="postList" prefHeight="456.0" prefWidth="482.0" style="-fx-background-color: transparent; -fx-control-inner-background: #00002C;" styleClass="secondary-color" />
             </children>
             <padding>
                 <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
