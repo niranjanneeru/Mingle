@@ -9,6 +9,9 @@ import com.txtkm.txtkm.utility.Utility;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -25,6 +28,12 @@ public class FeedController {
 
     @FXML
     protected HBox logOut;
+
+    @FXML
+    protected ImageView imageView;
+
+    @FXML
+    protected Label name;
 
     @FXML
     public void initialize() {
@@ -61,5 +70,10 @@ public class FeedController {
                 e.printStackTrace();
             }
         });
+
+        name.setText(Utility.profile.getName());
+        if (Utility.profile.getUrls() != null) {
+            imageView.setImage(new Image(Utility.profile.getUrls().get(0)));
+        }
     }
 }

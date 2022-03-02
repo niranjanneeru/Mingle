@@ -15,12 +15,12 @@
                   <Insets top="50.0" />
                </VBox.margin>
                <children>
-                  <ImageView fitHeight="97.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imageView" fitHeight="97.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@assets/account.png" />
                      </image>
                   </ImageView>
-                  <Label text="Niranjan B" textFill="WHITE">
+                  <Label fx:id="name" text="Niranjan B" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

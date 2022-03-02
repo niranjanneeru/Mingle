@@ -7,8 +7,6 @@ import com.txtkm.txtkm.database.Post;
 import com.txtkm.txtkm.database.PostBuilder;
 import com.txtkm.txtkm.database.Profile;
 import com.txtkm.txtkm.utility.Utility;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
