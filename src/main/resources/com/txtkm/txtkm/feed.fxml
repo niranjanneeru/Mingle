@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.FeedController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.txtkm.txtkm.controllers.FeedController">
    <left>
       <VBox prefHeight="546.0" prefWidth="266.0" spacing="30.0" styleClass="primary-color" stylesheets="@stylesheets/profile.css" BorderPane.alignment="CENTER">
          <children>
@@ -152,7 +152,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label cacheShape="false" centerShape="false" prefHeight="8.0" prefWidth="106.0" scaleShape="false" text="Creare Project" textFill="WHITE">
+                  <Label cacheShape="false" centerShape="false" prefHeight="8.0" prefWidth="106.0" scaleShape="false" text="Create Project" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
