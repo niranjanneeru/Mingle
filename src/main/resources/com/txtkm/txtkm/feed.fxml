@@ -49,7 +49,7 @@
                         <Insets top="15.0" />
                      </padding>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                  <HBox fx:id="postBox" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -89,14 +89,14 @@
                         <Insets top="20.0" />
                      </padding>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                  <HBox fx:id="logOut" alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
                      <children>
                         <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@assets/setting.png" />
+                              <Image url="@assets/log-out.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="20.0" prefWidth="127.0" text="Settings" textFill="WHITE">
+                        <Label prefHeight="20.0" prefWidth="127.0" text="LogOut" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
