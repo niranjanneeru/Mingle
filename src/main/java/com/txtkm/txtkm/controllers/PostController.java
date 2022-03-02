@@ -4,13 +4,10 @@ import com.txtkm.txtkm.Login;
 import com.txtkm.txtkm.database.Post;
 import com.txtkm.txtkm.database.PostBuilder;
 import com.txtkm.txtkm.utility.Utility;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;

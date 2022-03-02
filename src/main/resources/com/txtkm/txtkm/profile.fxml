@@ -71,7 +71,7 @@
                                 <Insets top="20.0" />
                             </padding>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
+                        <HBox fx:id="feedIcon" alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

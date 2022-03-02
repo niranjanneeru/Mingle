@@ -55,6 +55,9 @@ public class ProfileController {
     @FXML
     protected HBox postBox;
 
+    @FXML
+    protected HBox feedIcon;
+
     public void setProfile(Profile profile) {
         postBox.setOnMouseClicked(mouseEvent -> {
             FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("post.fxml"));
@@ -64,6 +67,10 @@ public class ProfileController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        });
+
+        feedIcon.setOnMouseClicked(mouseEvent -> {
+
         });
 
         PostBuilder builder = new PostBuilder(new Post());

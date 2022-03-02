@@ -54,6 +54,9 @@ public class AcceptorController {
 
         requestList.setOnMouseClicked(mouseEvent -> {
             int i = requestList.getSelectionModel().getSelectedIndex();
+            if(i == -1){
+                return;
+            }
             Post.Request r = builder.build().getRequests().get(i);
             pname.setText(r.requester.getName());
             pname.setEditable(false);
