@@ -9,6 +9,7 @@ public class LoginPersistence {
 
     private LoginPersistence() {
         prefs = Preferences.userRoot().node(this.getClass().getName());
+//        removePrefs();
     }
 
     public static LoginPersistence getPersistence() {

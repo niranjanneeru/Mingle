@@ -31,14 +31,14 @@
                 </VBox>
                 <VBox prefHeight="259.0" prefWidth="266.0">
                     <children>
-                        <HBox alignment="CENTER" prefHeight="33.0" prefWidth="266.0" styleClass="selected-border" stylesheets="@stylesheets/profile.css">
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="33.0" prefWidth="266.0" styleClass="selected-border" stylesheets="@stylesheets/profile.css" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@assets/account.png" />
                                     </image>
                                 </ImageView>
-                                <Label prefHeight="20.0" prefWidth="127.0" text="Profile" textFill="WHITE">
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Profile" textAlignment="CENTER" textFill="WHITE">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
@@ -51,14 +51,14 @@
                                 <Insets top="15.0" />
                             </padding>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                        <HBox fx:id="postBox" alignment="CENTER" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@assets/bell.png" />
                                     </image>
                                 </ImageView>
-                                <Label prefHeight="20.0" prefWidth="127.0" text="Notifications" textFill="WHITE">
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Posts" textFill="WHITE" HBox.hgrow="NEVER">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
@@ -71,14 +71,14 @@
                                 <Insets top="20.0" />
                             </padding>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                        <HBox fx:id="feedIcon" alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@assets/key.png" />
                                     </image>
                                 </ImageView>
-                                <Label prefHeight="20.0" prefWidth="127.0" text="Passwords" textFill="WHITE">
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Feed" textFill="WHITE">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
@@ -91,9 +91,9 @@
                                 <Insets top="20.0" />
                             </padding>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
                             <children>
-                                <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
                                     <image>
                                         <Image url="@assets/gear.png" />
                                     </image>
