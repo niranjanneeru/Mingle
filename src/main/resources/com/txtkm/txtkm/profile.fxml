@@ -35,7 +35,7 @@
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@assets/account.png" />
+                                        <Image url="@assets/user.png" />
                                     </image>
                                 </ImageView>
                                 <Label prefHeight="20.0" prefWidth="127.0" text="Profile" textAlignment="CENTER" textFill="WHITE">
@@ -55,7 +55,7 @@
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@assets/bell.png" />
+                                        <Image url="@assets/add-file.png" />
                                     </image>
                                 </ImageView>
                                 <Label prefHeight="20.0" prefWidth="127.0" text="Posts" textFill="WHITE" HBox.hgrow="NEVER">
@@ -75,7 +75,7 @@
                             <children>
                                 <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@assets/key.png" />
+                                        <Image url="@assets/rss.png" />
                                     </image>
                                 </ImageView>
                                 <Label prefHeight="20.0" prefWidth="127.0" text="Feed" textFill="WHITE">
@@ -91,14 +91,14 @@
                                 <Insets top="20.0" />
                             </padding>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
+                        <HBox fx:id="logOut" alignment="CENTER" layoutX="10.0" layoutY="80.0" prefHeight="29.0" prefWidth="266.0" styleClass="selected" VBox.vgrow="NEVER">
                             <children>
                                 <ImageView fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
                                     <image>
-                                        <Image url="@assets/gear.png" />
+                                        <Image url="@assets/log-out.png" />
                                     </image>
                                 </ImageView>
-                                <Label prefHeight="20.0" prefWidth="127.0" text="Settings" textFill="WHITE">
+                                <Label prefHeight="20.0" prefWidth="127.0" text="Logout" textFill="WHITE">
                                     <font>
                                         <Font size="15.0" />
                                     </font>

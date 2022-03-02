@@ -2,12 +2,11 @@ package com.txtkm.txtkm.controllers;
 
 import com.gluonhq.charm.glisten.control.TextField;
 import com.txtkm.txtkm.Login;
+import com.txtkm.txtkm.database.LoginPersistence;
 import com.txtkm.txtkm.database.Post;
 import com.txtkm.txtkm.database.PostBuilder;
 import com.txtkm.txtkm.database.Profile;
 import com.txtkm.txtkm.utility.Utility;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -58,6 +57,9 @@ public class ProfileController {
     @FXML
     protected HBox feedIcon;
 
+    @FXML
+    protected HBox logOut;
+
     public void setProfile(Profile profile) {
         postBox.setOnMouseClicked(mouseEvent -> {
             FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("post.fxml"));
@@ -69,8 +71,25 @@ public class ProfileController {
             }
         });
 
-        feedIcon.setOnMouseClicked(mouseEvent -> {
+        logOut.setOnMouseClicked(mouseEvent -> {
+            LoginPersistence.getPersistence().removePrefs();
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("login.fxml"));
+            Stage window = (Stage) profileImageView.getScene().getWindow();
+            try {
+                window.setScene(new Scene(fxmlLoader.load(), 799, 494));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
+        feedIcon.setOnMouseClicked(mouseEvent -> {
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("feed.fxml"));
+            Stage window = (Stage) profileImageView.getScene().getWindow();
+            try {
+                window.setScene(new Scene(fxmlLoader.load(), 848, 546));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
         PostBuilder builder = new PostBuilder(new Post());
