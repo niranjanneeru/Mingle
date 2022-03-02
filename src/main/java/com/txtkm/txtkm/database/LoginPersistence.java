@@ -21,7 +21,7 @@ public class LoginPersistence {
 
     public void setPrefs(String token) {
         removePrefs();
-        prefs.put(secret, token);
+//        prefs.put(secret, token);
     }
 
     public String getPrefs() {

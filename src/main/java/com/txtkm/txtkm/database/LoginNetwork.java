@@ -43,6 +43,7 @@ public class LoginNetwork {
 
     private void hashPassword() throws NoSuchAlgorithmException {
         this.password = toHexString(getSHA(this.password));
+        System.out.println(password);
     }
 
     private static byte[] getSHA(String input) throws NoSuchAlgorithmException {
