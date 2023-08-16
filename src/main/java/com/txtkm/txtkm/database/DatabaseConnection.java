@@ -27,5 +27,11 @@ public class DatabaseConnection {
         return connection;
     }
 
-    
+    public static boolean closeConnection() throws SQLException {
+        if (connection != null) {
+            connection.close();
+            connection = null;
+        }
+        return true;
+    }
 }
